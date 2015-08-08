@@ -69,6 +69,7 @@ module Jekyll
           doc = {
             "id" => i,
             "title" => entry.title,
+            "baseurl" => site.config["baseurl"],
             "url" => entry.url,
             "date" => entry.date,
             "categories" => entry.categories,
