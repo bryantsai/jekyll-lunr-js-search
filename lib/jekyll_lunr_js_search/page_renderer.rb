@@ -22,7 +22,7 @@ module Jekyll
       def render(item)
         layoutless = item.dup
 
-        Nokogiri::HTML(prepare(layoutless)).text
+        Nokogiri::HTML(prepare(layoutless)).css("#doc_content").first.text
       end
     end
   end  
