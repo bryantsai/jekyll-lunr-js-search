@@ -121,7 +121,7 @@ module Jekyll
         if doc.is_a?(Jekyll::Document)
           Jekyll::Renderer.new(@site, doc).output_ext
         else
-          doc.output_ext
+          defined? doc.output_ext ? doc.output_ext : nil
         end
       end
       
